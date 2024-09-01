@@ -3,7 +3,9 @@ package vn.edu.usth.weather;
 import android.os.Bundle;
 import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
+import vn.edu.usth.weather.ForecastFragment;
 
 
 public class WeatherActivity extends AppCompatActivity {
@@ -13,6 +15,12 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+
+        ForecastFragment firstFragment = new ForecastFragment();
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.add(R.id.container, firstFragment);
+        transaction.commit();
         Log.i(TAG, "onCreate: Activity created");
     }
 
@@ -45,4 +53,7 @@ public class WeatherActivity extends AppCompatActivity {
         super.onDestroy();
         Log.i(TAG, "onDestroy: Activity destroyed");
     }
+
+
 }
+
