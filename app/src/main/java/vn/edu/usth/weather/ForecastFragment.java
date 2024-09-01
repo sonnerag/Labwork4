@@ -75,7 +75,7 @@ public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
     textView.setPadding(25, 25, 25, 25);
 
     ImageView imageView = new ImageView(getActivity());
-    imageView.setImageResource(R.drawable.baseline_sunny_24);
+    imageView.setImageResource(R.drawable.baseline_sunny_24); // Replace with your actual weather icon resource
     imageView.setPadding(25, 25, 55, 25);
 
 
